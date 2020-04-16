@@ -55,50 +55,11 @@ Os seguintes parâmetros devem ser definidos dentro do arquivo prod-compose.yaml
 
 * **dirTrust** - Diretório que terá as cadeias confiáveis para validar certificado 
 
-* **companyLogo** - url com logo da empresa o
-
-* **APACHE_SSL** 
-   - Defina para true se deseja que o Apache do container forneça o serviço com TLS ativo.  
-   - Espera-se que o certificado digital e a respectiva chave sejam fornecidos através de um ponto de montagem no 
-   container. Descomente a sessão 'volumes' e configure os arquivos conforme orientação.
-
-        - Arquivo **./cert/apache.crt** 
-            - Espera-se um arquivo com a parte pública do certificado digital.
-
-        - Arquivo **./cert/apache.key** 
-            - Espera-se um arquivo contendo apenas a chave privada correspondente ao certificado digital utilizado. 
-            A chave privada não pode ter senha e deve estar no formato PEM (codificada em base64).
-            
-        - Arquivo **./cert/AC.pem**
-            - Espera-se um arquivo contendo a cadeia que o apache confiará para fazer o handshake.
+* **companyLogo** - url com logo da empresa
 
 * **urlsMultiCloud** - variável contendo as urls, clientid, clientsecret e id dos PSCs (encodado em json). Exemplo: 
 {uri:{"id":"nome","adapterid":"nome","client_id":"nome","client_secret":"nome"}}
  
----
-#### Exemplo:
-
-Considerando o cenário:  
- - SSL ativo;
- - Os certificados estão salvos na pasta ./cert/apache.crt , ./cert/apache.key e ./cert/AC.pem;  
- - A porta que o container deve expor é a 443;  
-    
-Teremos a seguinte configuração:
-
-```yaml
-    ...
-      # Se necessário, edite apenas as variávies abaixo: #
-      - "APACHE_SSL=true"
-    ports:
-      # Definir a PORTA_EXTERNA pela qual o container será exposto na rede.
-      - 443:8080
-    volumes:
-      - ./cert/apache.crt:/etc/apache2/cert/cert.pem
-      - ./cert/apache.key:/etc/apache2/cert/cert.key
-      - ./cert/AC.pem:/etc/apache2/cert/AC.pem
-    ... 
-```
-
 ### Executando o CEAS
 
 * **Atenção:** Antes de continuar é necessário solicitar o acesso ao repositório de imagens do CEAS diretamente à equipe 
