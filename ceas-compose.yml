@@ -22,7 +22,7 @@ services:
      - "redisPort=6379"
      - "dirTrust=/var/www/data/trust/" #cadeias que validador de assinatura confiará 
      - "lifetime=86400"
-     - "companyLogo=https://pbs.twimg.com/profile_images/887672393648414720/TVMqDVLD_400x400.jpg" #url com logo da empresa
+     - "companyLogo=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOmaV8xt4NH4d51pDKdDXOLgHqf8M64e-xx2AhA3jSAngLRENO&s" #url com logo da empresa
      - "sslverifypeer=false"
      - 'urlsMultiCloud={"https:\/\/apicloudid.hom.vaultid.com.br":{"id":"VAULTID","adapterid":"VAULTID","client_id":"false","client_secret":"false"},"https:\/\/apihom.birdid.com.br":{"id":"BIRDID","adapterid":"BIRDID","client_id":"false","client_secret":"false"}}'
     ports:
