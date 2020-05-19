@@ -24,8 +24,7 @@ services:
      - "companyLogo=<url>" #url com logo da empresa
      - "sslverifypeer=false"
      - "APACHE_SSL=true"
-     - 'urlsMultiCloud={"https:\/\/apicloudid.hom.vaultid.com.br":{"id":"VAULTIDHOM","adapterid":"VAULTIDHOM","client_id":"clientid","client_secret":"clientsecret"},"https:\/\/apicloudid.vaultid.com.br":{"id":"VAULTID","adapterid":"VAULTID","client_id":"clientid","client_secret":"clientsecret"},"https:\/\/api.birdid.com.br":{"id":"BIRDID","adapterid":"BIRDID","client_id":"clientid","client_secret":"clientsecret"}}'
-
+     - 'urlsMultiCloud={"https:\/\/apihom.birdid.com.br":{"id":"BIRDID","adapterid":"BIRDID","client_id":"false","client_secret":"false"},"https:\/\/apicloudid.hom.vaultid.com.br":{"id":"VAULTID","adapterid":"VAULTID","client_id":"false","client_secret":"false"}}'
     ports:
       # Definir a PORTA_EXTERNA TCP pela qual o container será exposto na rede.
       - 8080:8080
