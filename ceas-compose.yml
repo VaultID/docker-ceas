@@ -24,7 +24,7 @@ services:
      - "lifetime=86400"
      - "companyLogo=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOmaV8xt4NH4d51pDKdDXOLgHqf8M64e-xx2AhA3jSAngLRENO&s" #url com logo da empresa
      - "sslverifypeer=false"
-     - 'urlsMultiCloud={"https:\/\/apicloudid.hom.vaultid.com.br":{"id":"VAULTID","adapterid":"VAULTID","client_id":"false","client_secret":"false"},"https:\/\/apihom.birdid.com.br":{"id":"BIRDID","adapterid":"BIRDID","client_id":"false","client_secret":"false"}}'
+     - 'urlsMultiCloud={"https:\/\/apihom.birdid.com.br":{"id":"BIRDID","adapterid":"BIRDID","client_id":"false","client_secret":"false"},"https:\/\/apicloudid.hom.vaultid.com.br":{"id":"VAULTID","adapterid":"VAULTID","client_id":"false","client_secret":"false"}}'
     ports:
       # Definir a PORTA_EXTERNA TCP pela qual o container será exposto na rede.
       - 8080:8080
